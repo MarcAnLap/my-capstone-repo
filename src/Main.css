@@ -1,0 +1,74 @@
+/* Main styles */
+.main-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 20px; /* Adds space between grid items */
+  }
+  
+  .main-grid {
+    display: flex; /* Use flexbox instead of grid */
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    gap: 2rem;
+  }
+  
+  .main-grid .card {
+    background-color: #edefee;
+    border: 5px solid white;
+    border-radius: 16px;
+    padding: 0px;
+    flex: 1 1 300px; /* Flex-grow and flex-basis */
+    text-align: left;
+    margin-top: 60px;
+    max-width: 260px;
+    overflow: hidden; /* Ensures that any overflow content is hidden */
+    transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease
+  }
+  
+  .main-grid .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .main-grid .card h3 {
+    font-size: 1.27rem;
+    margin: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .main-grid .card p {
+    font-size: 0.8rem;
+    margin: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .main-grid .card .price {
+    color:#ee9972;
+    font-weight: bold;
+    display: block; 
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+
+  }
+
+  
+
+
+  .specials-section h2 {
+    text-align: left; /* Align text to the left */
+    margin-top: 60px; 
+    padding: 0; /* Remove padding if needed */
+    font-size: 48px;
+  }
+  
+  /* Hover effects */
+.main-grid .card:hover {
+    border: 5px solid #f4ce14; /* Yellow border on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+    opacity: 65%;
+    
+  }

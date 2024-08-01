@@ -60,12 +60,9 @@ button {
 
 }
 
-/*button:focus {
-    border-color: rgb(255, 255, 255); /* Border color when clicked 
-}*/
-
 button:hover {
     border-color: rgb(255, 255, 255); /* Border color when hovered */
+    opacity: 85%;
 }
 
 /* Responsive styles */
@@ -78,7 +75,7 @@ button:hover {
 
     .header-content {
         grid-column: 1 / 2; /* Places content in the first column */
-        margin-top: -10px; /* Removes any margin adjustments */
+        margin-top: -10px; 
         margin-left: 10px;
         margin-bottom: 0;
         padding-bottom: 0;
@@ -90,9 +87,9 @@ button:hover {
     }
 
     .header-img img {
-        max-width: 100px; /* Adjusts image size for responsiveness */
+        max-width: 110px; /* Adjusts image size for responsiveness */
         height: auto;
-        margin-top: -30px;
+        margin-top: 0px;
     }
 
     button {
@@ -101,8 +98,10 @@ button:hover {
         margin-bottom: 20px;
     }
     p{
-        font-size: 12px;
+        font-size: 16px;
         margin-top: -10px;
-        font-family: "Karla", sans-serif;
+        font-family: "Karla", serif;
+        font-style: italic;
+        letter-spacing: 0.5px;
     }
 }
