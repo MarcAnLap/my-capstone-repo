@@ -5,14 +5,15 @@ import Main from './component/Main';
 import Footer from './component/Footer';
 import './App.css';
 
+
 function App() {
   return (
-    <>
-      <Header />
+    <div className='App'>
       <Nav />
+      <Header />
       <Main />
       <Footer />
-    </>
+    </div>
   );
 }
 

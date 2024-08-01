@@ -1,0 +1,108 @@
+/* Header styles */
+.App-header {
+    background-color: rgb(73,94,87);
+    background-size: cover; /* Ensures the image covers the entire header */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 50vh;
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    grid-template-columns: repeat(11, 1fr); /* 6 equal columns */
+    gap: 20px; /* Adds space between grid items */
+  }
+
+.header-content {
+    grid-column: 4/ span 3; /* Places content in the third column */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns items to the start (left) */
+    text-align: left; /* Aligns text to the left */
+    margin-top: -100px;
+}
+
+.header-img {
+    grid-column: 8 / span 2; /* Places the image in the 5th and 6th columns */
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+}
+
+.header-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top:100px;
+}
+
+h1 {
+    color:#f4ce14;
+    font-family: "Markazi Text", serif;
+}
+
+p {
+    font-family: "Karla", sans-serif;
+    
+}
+
+button {
+    background-color: #f4ce14;
+    padding: 14px 40px;
+    border-radius: 10px;
+    border: 1px solid #f4ce14;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.178s ease; /* Smooth transition */
+
+}
+
+/*button:focus {
+    border-color: rgb(255, 255, 255); /* Border color when clicked 
+}*/
+
+button:hover {
+    border-color: rgb(255, 255, 255); /* Border color when hovered */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .App-header {
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 10px; /* Adjust gap for smaller screens */
+        height: auto; /* Adjust height for responsive */
+    }
+
+    .header-content {
+        grid-column: 1 / 2; /* Places content in the first column */
+        margin-top: -10px; /* Removes any margin adjustments */
+        margin-left: 10px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .header-img {
+        grid-column: 2 / 3; /* Places the image in the second column */
+        margin-top: 0; /* Removes any margin adjustments */
+    }
+
+    .header-img img {
+        max-width: 100px; /* Adjusts image size for responsiveness */
+        height: auto;
+        margin-top: -30px;
+    }
+
+    button {
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+        font-size: calc(8px + 1.5vmin); /* Adjust font size for smaller screens */
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 12px;
+        margin-top: -10px;
+        font-family: "Karla", sans-serif;
+    }
+}

@@ -1,5 +1,126 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+  text-align: center;
+}
+/* Nav.css */
+
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  height: 60px;
+  padding: 1rem;
 }
 
+.navbar-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto ;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  grid-column: 3; /* Places the logo in the second column */
+  justify-self: center;
+}
+
+.navbar-logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  grid-column: 4/ span 2 ; /* Places the logo in the second column */
+  justify-self: center;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    position: relative; /* Make the navbar relative to position the dropdown correctly */
+  }
+
+  .navbar-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically in the container */
+  }
+
+  .navbar-toggle {
+    display: block;
+    position: absolute; /* Fix to the top left corner */
+    top: 0;
+    left: 0;
+    padding: 10px; /* Add padding for spacing */
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    margin-left: 50px; /* Adjust as needed to position it relative to the burger icon */
+    padding: 10px; /* Add padding to avoid overlap */
+  }
+
+  .navbar-logo img {
+    height: 40px;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 85px; /* Position it below the navbar */
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #000; /* Default text color */
+  font-weight: bold;
+  display: block; /* Ensure the full width is clickable */
+  padding: 10px; /* Add padding for better click area */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.navbar-links a:hover {
+  background-color: rgb(73,94,87);
+  color: yellow; /* Change text color on hover */
+}
 
