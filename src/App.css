@@ -53,9 +53,20 @@
   font-weight: bold;
 }
 
+.navbar-links a:hover {
+  /*background-color: rgb(73,94,87);
+  color: yellow;*/
+  border-radius: 10%;
+}
+
+
 .navbar-toggle {
   display: none;
 }
+
+
+
+
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -117,10 +128,12 @@
   display: block; /* Ensure the full width is clickable */
   padding: 10px; /* Add padding for better click area */
   transition: color 0.3s ease; /* Smooth color transition on hover */
+  /*margin-bottom: 20px;*/
 }
 
 .navbar-links a:hover {
   background-color: rgb(73,94,87);
   color: yellow; /* Change text color on hover */
+  border-radius: 0%;
 }
 

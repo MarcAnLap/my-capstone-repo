@@ -41,8 +41,17 @@
 h1 {
     color:#f4ce14;
     font-family: "Markazi Text", serif;
+    margin-top: 30px;
 }
 
+.header-content h2 {
+    font-family: "Markazi Text", serif;
+    margin-top: -45px;
+    padding-top: 0.1rem;
+    font-size: 120% vh;
+    opacity: 40%;
+
+}
 p {
     font-family: "Karla", sans-serif;
     
@@ -75,10 +84,19 @@ button:hover {
 
     .header-content {
         grid-column: 1 / 2; /* Places content in the first column */
-        margin-top: -10px; 
+        margin-top: -20px; 
         margin-left: 10px;
         margin-bottom: 0;
         padding-bottom: 0;
+    }
+
+    .header-content h2 {
+        font-family: "Markazi Text", serif;
+        margin-top: -20px;
+        padding: 0;
+        font-size: 120% vh;
+        opacity: 40%;
+    
     }
 
     .header-img {
