@@ -1,0 +1,89 @@
+/* Styles for the entire booking page */
+.booking-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    position: relative; /* Positioning context for child elements */
+}
+
+/* Styles for the header section */
+.booking-header {
+    position: relative; /* Ensure relative positioning for the absolute child */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Header title */
+.booking-header h1 {
+    color: #f4ce14; /* Match with your homepage header color */
+    font-family: "Markazi Text", serif;
+}
+
+/* Header paragraph */
+.booking-header p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Styles for the arrow image */
+.booking-header .arrow-container {
+    position: fixed;
+    top: 35px; /* Adjust as needed */
+    left: 65px; /* Adjust as needed */
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    z-index: 1001;
+}
+
+.booking-header .arrow-container img.arrow {
+    width: 100%; /* Adjust size as needed */
+    height: 100%; /* Adjust size as needed */
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1; /* Ensure the arrow is on top */
+}
+
+.booking-header .arrow-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px; /* Adjust size as needed */
+    height: 60px; /* Adjust size as needed */
+    background-color: rgb(73,94,87); /* Green background */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.1s ease;
+    z-index: 0; /* Ensure the background is behind the arrow */
+}
+
+.booking-header .arrow-container:hover::before {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.booking-header .arrow-container:hover img.arrow {
+    filter: brightness(0) saturate(100%) invert(75%) sepia(58%) saturate(446%) hue-rotate(358deg) brightness(97%) contrast(102%);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .booking-header .arrow-container {
+        position: fixed;
+        top: 17px;
+        left: 17px; /* Move arrow closer to the left edge */
+    }
+    .booking-header .arrow-container.scrolled::before {
+        background-color: rgb(100, 120, 110); /* Adjust color for scrolled state */
+        transform: translate(-50%, -50%) scale(1); /* Ensure the circle is visible when scrolled */
+    }
+    
+    /* Additional styles for scrolled state (optional) */
+    .booking-header .arrow-container.scrolled img.arrow {
+        filter: brightness(0) saturate(100%) invert(75%) sepia(58%) saturate(446%) hue-rotate(358deg) brightness(90%) contrast(90%);
+    }
+
+
+}

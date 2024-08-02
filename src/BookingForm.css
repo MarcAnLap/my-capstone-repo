@@ -1,0 +1,184 @@
+/* Styles pour le conteneur du formulaire et de l'image */
+.booking-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+/* Styles pour le conteneur du formulaire et de l'image */
+.booking-form-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: rgb(73, 94, 87);
+}
+
+/* Styles pour la carte du formulaire */
+.form-card {
+  flex: 0, 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles pour le formulaire de réservation */
+.booking-form {
+  display: grid;
+  max-width: 600px;
+  width: 100%;
+  gap: 20px;
+  background-color: #fff;
+  padding: 30px;
+  padding-right: 42px;
+  margin-left: 20px;
+}
+
+/* Styles pour les labels du formulaire */
+.booking-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Styles pour les champs de saisie et les menus déroulants */
+.booking-form input,
+.booking-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Styles pour le bouton de soumission du formulaire */
+.booking-form button {
+  background-color: #f4ce14;
+  color: #000;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Styles pour le bouton au survol */
+.booking-form button:hover {
+  background-color: #d4b806;
+}
+
+/* Styles pour l'alerte */
+.alert {
+  display: grid;
+  max-width: 600px;
+  margin: 20px 0px;
+  gap: 10px;
+  background-color: #fff;
+  padding: 18px;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it's on top of other elements */
+  text-align: center;
+}
+
+.alert p {
+  color: red;
+  font-weight: bold;
+}
+
+/* Styles pour le message de l'alerte */
+.alert h2 {
+  margin: 0;
+  color: #28a745;
+  z-index: 0;
+}
+
+/* Styles pour le bouton de fermeture de l'alerte */
+.alert button {
+  background-color: #f4ce14;
+  color: #000;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+/* Styles pour le bouton au survol */
+.alert button:hover {
+  background-color: #d4b806;
+}
+
+/* Styles pour l'image à côté du formulaire */
+.form-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .booking-form-container {
+    flex-direction: column; /* Stack form and image vertically */
+    gap: 20px; /* Space between the form and image */
+  }
+
+  .booking-form {
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+
+  .form-image {
+    width: 100%;
+    max-width: none; /* Allow image to take full width */
+  }
+
+  .form-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .alert button {
+    background-color: #f4ce14;
+    color: #000;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  /* Style the arrow image and position it at the left corner */
+  .booking-header img[src*="arrow_left.png"] {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    transition: all 0.3s ease;
+  }
+
+  /* Add a green circle background and change the arrow color on hover */
+  .booking-header img[src*="arrow_left.png"]:hover {
+    background-color: #28a745; /* Green circle */
+    border-radius: 50%;
+    padding: 10px; /* Adjust size of the circle */
+    filter: brightness(0) saturate(100%) invert(40%) sepia(50%) saturate(5000%)
+      hue-rotate(90deg) brightness(110%) contrast(100%);
+  }
+}
