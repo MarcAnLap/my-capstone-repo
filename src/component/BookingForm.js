@@ -31,19 +31,19 @@ function BookingForm() {
     <div className="booking-form-wrapper">
       {showAlert && (
         <div className="alert">
-          <h2>Réservation Confirmée!</h2>
+          <h2>Confirmed reservation!</h2>
           <p>Date: {formData.date}</p>
-          <p>Heure: {formData.time}</p>
-          <p>Nombre d'invités: {formData.guests}</p>
+          <p>Hour: {formData.time}</p>
+          <p>Number of guests: {formData.guests}</p>
           <p>Occasion: {formData.occasion}</p>
-          <button onClick={() => setShowAlert(false)}>Fermer</button>
+          <button onClick={() => setShowAlert(false)}>Close</button>
         </div>
       )}
 
       <div className="booking-form-container">
         <div className="form-card">
           <form onSubmit={handleSubmit} className="booking-form">
-            <label htmlFor="date">Choisir la date</label>
+            <label htmlFor="date">Choose date</label>
             <input
               type="date"
               id="date"
@@ -52,14 +52,14 @@ function BookingForm() {
               required
             />
 
-            <label htmlFor="time">Choisir l'heure</label>
+            <label htmlFor="time">Choose time</label>
             <select
               id="time"
               value={formData.time}
               onChange={handleChange}
               required
             >
-              <option value="">Sélectionnez une heure</option>
+              <option value="">Select a time</option>
               <option value="17:00">17:00</option>
               <option value="18:00">18:00</option>
               <option value="19:00">19:00</option>
@@ -67,7 +67,7 @@ function BookingForm() {
               <option value="21:00">21:00</option>
             </select>
 
-            <label htmlFor="guests">Nombre d'invités</label>
+            <label htmlFor="guests"># Numbers of guests</label>
             <input
               type="number"
               id="guests"
@@ -86,12 +86,14 @@ function BookingForm() {
               onChange={handleChange}
               required
             >
-              <option value="">Sélectionnez une occasion</option>
-              <option value="Birthday">Anniversaire</option>
-              <option value="Anniversary">Anniversaire de mariage</option>
+              <option value="">Select an occasion</option>
+              <option value="Birthday">Wedding Party</option>
+              <option value="Anniversary">Birthday</option>
+              <option value="Anniversary">Staff Events</option>
+              <option value="Anniversary">Other</option>
             </select>
 
-            <button type="submit">Faire la réservation</button>
+            <button type="submit">Make the reservation!</button>
           </form>
         </div>
 

@@ -3,6 +3,7 @@
   display: grid;
   grid-template-rows: auto auto 1fr auto;
   min-height: 100vh;
+  /*align-items: center;*/
   text-align: center;
 }
 /* Nav.css */
@@ -92,7 +93,7 @@
   .navbar-logo {
     display: flex;
     align-items: center;
-    margin-left: 50px; /* Adjust as needed to position it relative to the burger icon */
+    margin-left: 0px; /* Adjust as needed to position it relative to the burger icon */
     padding: 10px; /* Add padding to avoid overlap */
   }
 
@@ -137,3 +138,9 @@
   border-radius: 0%;
 }
 
+/* Standard mode only */
+@media (min-width: 769px) {
+  .navbar-links a:hover {
+    border-radius: 10%; /* Apply 10% border-radius in standard mode */
+  }
+}

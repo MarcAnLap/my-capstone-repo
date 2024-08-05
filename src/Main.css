@@ -73,3 +73,38 @@
     opacity: 65%;
     
   }
+
+  @media (max-width : 768px) {
+
+    .specials-section h2 {
+      text-align: center; 
+      margin-top: 30px; 
+      padding: 0; /* Remove padding if needed */
+      font-size: 48px;
+      margin-bottom: 60px;
+    }
+
+    .main-grid {
+      justify-content: center; /* Center the cards */
+    }
+  
+    .main-grid .card {
+      max-width: 100%; /* Allow card to take full width */
+      margin: 50px 0; /* Center the card with auto margins */
+      /*border: 5px solid rgb(253, 253, 253);*/
+      
+    }
+
+    .main-grid .card p {
+      font-size: 0.8rem;
+      margin-bottom: 20dvh;
+      letter-spacing: 0.5px;
+    }
+
+    .price {
+      float: right;
+      margin-right: 1rem;
+      margin-bottom: 2rem;
+    }
+  
+  }
